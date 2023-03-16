@@ -125,21 +125,13 @@
     {
         "id": "544f0a6f8c6136db",
         "type": "ui_group",
-        "name": "Group 2",
-        "tab": "3b0409ace6584c3e",
+        "name": "Group 1",
+        "tab": "",
         "order": 2,
         "disp": true,
-        "width": 6
-    },
-    {
-        "id": "a60bf6a22b3e95ec",
-        "type": "ui_spacer",
-        "z": "0e46594e7c184d66",
-        "name": "spacer",
-        "group": "bdeaa1cd139496b7",
-        "order": 3,
-        "width": 6,
-        "height": 1
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "82bc284bb7df614c",
@@ -151,20 +143,12 @@
         "id": "fa8e8e5adeacfe66",
         "type": "ui_group",
         "name": "Trang chủ",
-        "tab": "5a46c0bda4183baf",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "12",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "5a46c0bda4183baf",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "6c665c6e3d5e7cc3",
@@ -179,7 +163,7 @@
         "id": "4db4869f657f6363",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "tranhuy2023.cloud.shiftr.io",
+        "broker": "ducthuan002023.cloud.shiftr.io",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -233,12 +217,22 @@
     {
         "id": "151d5bb044d8af6d",
         "type": "mongodb-aleph-config",
-        "hostname": "cluster0.khxudmo.mongodb.net",
+        "hostname": "cluster0.eupqqpj.mongodb.net",
         "topology": "dnscluster",
         "connectOptions": "",
         "port": "27017",
         "db": "bai1",
         "name": "Mongo DB"
+    },
+    {
+        "id": "677eb5d5fbab3b9e",
+        "type": "ui_spacer",
+        "z": "0e46594e7c184d66",
+        "name": "spacer",
+        "group": "544f0a6f8c6136db",
+        "order": 2,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "6714c573c749bece",
@@ -247,7 +241,7 @@
         "name": "",
         "mqtt_port": 1883,
         "mqtt_ws_bind": "port",
-        "mqtt_ws_port": "tranhuy2023.cloud.shiftr.io",
+        "mqtt_ws_port": "ducthuan002023.cloud.shiftr.io",
         "mqtt_ws_path": "",
         "cert": "",
         "key": "",
@@ -276,7 +270,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 250,
-        "y": 180,
+        "y": 280,
         "wires": [
             [
                 "64eeb33bb8038aa4"
@@ -297,8 +291,8 @@
         "correl": "",
         "expiry": "",
         "broker": "4db4869f657f6363",
-        "x": 510,
-        "y": 280,
+        "x": 650,
+        "y": 200,
         "wires": []
     },
     {
@@ -306,9 +300,9 @@
         "type": "ui_switch",
         "z": "0e46594e7c184d66",
         "name": "",
-        "label": "switch",
+        "label": "BẬT ĐÈN",
         "tooltip": "",
-        "group": "fa8e8e5adeacfe66",
+        "group": "bdeaa1cd139496b7",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -317,18 +311,18 @@
         "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "0",
+        "onvalue": "1",
         "onvalueType": "str",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "1",
+        "offvalue": "0",
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 250,
-        "y": 280,
+        "x": 260,
+        "y": 200,
         "wires": [
             [
                 "6c14f852cbb3295f"
@@ -341,11 +335,11 @@
         "z": "0e46594e7c184d66",
         "name": "",
         "group": "bdeaa1cd139496b7",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "DO AM",
+        "title": "ĐỘ ẨM",
         "label": "% ĐỘ ẨM",
         "format": "{{value}}",
         "min": 0,
@@ -355,11 +349,11 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "70",
+        "seg2": "85",
         "className": "",
-        "x": 540,
-        "y": 80,
+        "x": 680,
+        "y": 280,
         "wires": []
     },
     {
@@ -379,92 +373,7 @@
         "y": 380,
         "wires": [
             [
-                "98e1d9bc3e8c587b",
-                "4f037304d2875712"
-            ]
-        ]
-    },
-    {
-        "id": "207a991f7a951425",
-        "type": "mqtt in",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "topic": "anhsang",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "4db4869f657f6363",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 240,
-        "y": 580,
-        "wires": [
-            [
-                "209095498395741c"
-            ]
-        ]
-    },
-    {
-        "id": "209095498395741c",
-        "type": "ui_gauge",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "group": "bdeaa1cd139496b7",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "ANH SANG",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1024",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 490,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "fd77a195b1f9dfe1",
-        "type": "mongodb-aleph-out",
-        "z": "0e46594e7c184d66",
-        "mongodb": "151d5bb044d8af6d",
-        "name": "HEHE",
-        "collection": "bang1",
-        "payonly": false,
-        "upsert": false,
-        "multi": false,
-        "operation": "insert",
-        "x": 1230,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "185063f1a4babf8f",
-        "type": "function",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "func": "msg.topic = \"huy\";\nt = msg.payload ;\nmsg.payload = \"hello node red\";\nmsg.temp = t;\nvar d=new Date();\nmsg.time =  Date();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1020,
-        "y": 360,
-        "wires": [
-            [
-                "fd77a195b1f9dfe1"
+                "98e1d9bc3e8c587b"
             ]
         ]
     },
@@ -474,167 +383,50 @@
         "z": "0e46594e7c184d66",
         "name": "",
         "group": "bdeaa1cd139496b7",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "NHIET DO",
-        "label": "DO C",
+        "title": "NHIỆT ĐỘ",
+        "label": "ĐỘ C",
         "format": "{{value}}",
         "min": 0,
-        "max": "100",
+        "max": "50",
         "colors": [
             "#00b500",
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "30",
+        "seg2": "40",
         "className": "",
-        "x": 470,
-        "y": 480,
+        "x": 670,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "4f037304d2875712",
-        "type": "delay",
+        "id": "fd9d20c55a0a574f",
+        "type": "mqtt in",
         "z": "0e46594e7c184d66",
         "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "30",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 520,
-        "y": 360,
+        "topic": "dienap",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4db4869f657f6363",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 500,
         "wires": [
             [
-                "185063f1a4babf8f"
+                "c4dbc9abfab181d9"
             ]
         ]
     },
     {
-        "id": "31aba80375aa9dcb",
-        "type": "inject",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 800,
-        "y": 300,
-        "wires": [
-            [
-                "185063f1a4babf8f"
-            ]
-        ]
-    },
-    {
-        "id": "c976fbc103a8ef82",
-        "type": "mongodb-aleph-in",
-        "z": "0e46594e7c184d66",
-        "mongodb": "151d5bb044d8af6d",
-        "name": "payload",
-        "collection": "bang1",
-        "operation": "find",
-        "x": 460,
-        "y": 700,
-        "wires": [
-            [
-                "9c14eaf81979fa33"
-            ]
-        ]
-    },
-    {
-        "id": "9c14eaf81979fa33",
-        "type": "function",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "func": "msg.payload = msg.payload[59];\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 760,
-        "y": 760,
-        "wires": [
-            [
-                "4e032dfe025d4418",
-                "355688d2526c2fe9"
-            ]
-        ]
-    },
-    {
-        "id": "b3ae0b1da9de48c1",
-        "type": "inject",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
-        "y": 700,
-        "wires": [
-            [
-                "c976fbc103a8ef82"
-            ]
-        ]
-    },
-    {
-        "id": "4e032dfe025d4418",
-        "type": "function",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "func": "var temp = msg.payload.temp;\nmsg.payload = temp;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 600,
-        "wires": [
-            [
-                "9181774f650fd508"
-            ]
-        ]
-    },
-    {
-        "id": "9181774f650fd508",
+        "id": "c4dbc9abfab181d9",
         "type": "ui_gauge",
         "z": "0e46594e7c184d66",
         "name": "",
@@ -643,8 +435,8 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
-        "label": "units",
+        "title": "ĐIỆN ÁP",
+        "label": "V",
         "format": "{{value}}",
         "min": 0,
         "max": 10,
@@ -656,87 +448,104 @@
         "seg1": "",
         "seg2": "",
         "className": "",
-        "x": 1230,
-        "y": 640,
+        "x": 660,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "12228e1ee0fbfa5b",
-        "type": "ui_chart",
+        "id": "92934b3be2536cc9",
+        "type": "mqtt in",
         "z": "0e46594e7c184d66",
         "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1F77B4",
-            "#AEC7E8",
-            "#FF7F0E",
-            "#2CA02C",
-            "#98DF8A",
-            "#D62728",
-            "#FF9896",
-            "#9467BD",
-            "#C5B0D5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1130,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "355688d2526c2fe9",
-        "type": "function",
-        "z": "0e46594e7c184d66",
-        "name": "",
-        "func": "var time = msg.payload.time;\nmsg.payload = time;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 980,
-        "y": 720,
+        "topic": "dongdien",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4db4869f657f6363",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 660,
         "wires": [
             [
-                "5202a2d65977a0b5"
+                "dfe542367c5af962"
             ]
         ]
     },
     {
-        "id": "5202a2d65977a0b5",
-        "type": "ui_text",
+        "id": "dfe542367c5af962",
+        "type": "ui_gauge",
         "z": "0e46594e7c184d66",
+        "name": "",
         "group": "bdeaa1cd139496b7",
         "order": 5,
         "width": 0,
         "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "gtype": "gage",
+        "title": "DÒNG ĐIỆN",
+        "label": "A",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
         "className": "",
-        "x": 1210,
-        "y": 740,
+        "x": 630,
+        "y": 660,
         "wires": []
+    },
+    {
+        "id": "3a589e84a0920b67",
+        "type": "ui_gauge",
+        "z": "0e46594e7c184d66",
+        "name": "",
+        "group": "bdeaa1cd139496b7",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CÔNG SUẤT",
+        "label": "W",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 630,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f834471bda97f895",
+        "type": "mqtt in",
+        "z": "0e46594e7c184d66",
+        "name": "",
+        "topic": "congsuat",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4db4869f657f6363",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 800,
+        "wires": [
+            [
+                "3a589e84a0920b67"
+            ]
+        ]
     }
 ]
